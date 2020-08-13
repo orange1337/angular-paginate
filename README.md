@@ -1,6 +1,6 @@
 # Angular-Paginate
 
-![](https://photos.app.goo.gl/4ws2Evbkg7yKb4SeA)
+![](https://media.giphy.com/media/hWp9MXjQNGWDOS77vf/giphy.gif)
 
 
 # Usage
@@ -20,7 +20,7 @@ import { AngularPaginateModule } from 'angular-paginate';
   ]
 })
 ```
-On Component
+In Component
 
 ```hs
 <angular-paginate [totalPages]="pages" [maximumShowAblePage]="pageCount"  (activePageNumber)="activePage($event)"></angular-paginate>

@@ -1,6 +1,6 @@
 {
   "name": "angular-paginate",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "peerDependencies": {
     "@angular/common": "^10.0.6",
     "@angular/core": "^10.0.6"
@@ -11,5 +11,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jiygun/angular-paginate.git"
-  }
+  },
+  "keywords": [
+    "angular",
+    "paginate",
+    "pagination"
+  ],
+  "license": "MIT",
+  "author": "Jiyan Güngen"
 }

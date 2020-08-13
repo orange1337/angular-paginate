@@ -30,15 +30,19 @@ export class AngularPaginateComponent implements OnInit,OnChanges {
   ngOnInit(): void {
   }
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes.totalPages.currentValue!=changes.totalPages.previousValue){
-      this._pagination.totalPages=changes.totalPages.currentValue;
-      changes.totalPages.currentValue<=0?this._isPaginationDisable=true:this._isPaginationDisable=false;
-      this._pages=this._pagination.getPages(this.activePage);
+    if(changes.totalPages!=undefined){
+      if(changes.totalPages.currentValue!=changes.totalPages.previousValue){
+        this._pagination.totalPages=changes.totalPages.currentValue;
+        changes.totalPages.currentValue<=0?this._isPaginationDisable=true:this._isPaginationDisable=false;
+        this._pages=this._pagination.getPages(this.activePage);
+      }
     }
-    if(changes.maximumShowAblePage.currentValue!=changes.maximumShowAblePage.previousValue){
-      changes.maximumShowAblePage.currentValue!=undefined&&changes.maximumShowAblePage.currentValue!=null&&typeof changes.maximumShowAblePage.currentValue=='number'?
-      this._pagination.maxShowAblePage=changes.maximumShowAblePage.currentValue:null;
-      this._pages=this._pagination.getPages(this.activePage);
+    if(changes.maximumShowAblePage!=undefined){
+      if(changes.maximumShowAblePage.currentValue!=changes.maximumShowAblePage.previousValue){
+        changes.maximumShowAblePage.currentValue!=undefined&&changes.maximumShowAblePage.currentValue!=null&&typeof changes.maximumShowAblePage.currentValue=='number'?
+        this._pagination.maxShowAblePage=changes.maximumShowAblePage.currentValue:null;
+        this._pages=this._pagination.getPages(this.activePage);
+      }
     }
   }
   setActivePage(page:number){
