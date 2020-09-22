@@ -1,25 +1,37 @@
 $color-dark: #0B0C10;
 $color-white:#C5C6C7;
-$color-main: #66fcf1;
 .pagination{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+    color: $color-dark;
+    border-color: $color-white;
     .pagination__link{
         float: left;
         cursor: pointer;
-        color: $color-dark;
         padding: 10px 15px;
         text-decoration: none;
-        border: 1px solid $color-white;
+        border: 1px solid;
         &.active{
             background-color: $color-dark;
             border: 1px solid $color-dark;
             color: $color-white;
         }
-        &.disable{
-            display: none;
-        }
-      }
-} 
+    }
+    .cursor-disabled{
+        cursor: not-allowed;
+    }
+    &.disable{
+        display: none !important;
+    }
+}
+.xs-none{
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .xs-none{
+        display: block !important;
+    }
+}

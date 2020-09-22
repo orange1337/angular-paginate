@@ -1,6 +1,6 @@
 {
   "name": "angular-paginate",
-  "version": "0.0.7",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.6",
     "@angular/core": "^10.0.6"
@@ -17,6 +17,5 @@
     "paginate",
     "pagination"
   ],
-  "license": "MIT",
   "author": "Jiyan Güngen"
 }
