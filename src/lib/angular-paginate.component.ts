@@ -54,6 +54,8 @@ export class AngularPaginateComponent implements OnInit,OnChanges {
         this._pagination.totalPages=changes.totalPages.currentValue;
         changes.totalPages.currentValue<=0?this._isPaginationDisable=true:this._isPaginationDisable=false;
         this._pages=this._pagination.getPages(this.activePage);
+        this._isFirstSectionVisible=this._pagination.isFirstSectionVisible;
+        this._isLastSectionVisible=this._pagination.isLastSectionVisible;
       }
     }
     if(changes.maximumShowAblePage!=undefined){
@@ -61,6 +63,8 @@ export class AngularPaginateComponent implements OnInit,OnChanges {
         changes.maximumShowAblePage.currentValue!=undefined&&changes.maximumShowAblePage.currentValue!=null&&typeof changes.maximumShowAblePage.currentValue=='number'?
         this._pagination.maxShowAblePage=changes.maximumShowAblePage.currentValue:null;
         this._pages=this._pagination.getPages(this.activePage);
+        this._isFirstSectionVisible=this._pagination.isFirstSectionVisible;
+        this._isLastSectionVisible=this._pagination.isLastSectionVisible;
       }
     }
   }
