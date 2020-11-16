@@ -1,5 +1,5 @@
 {
-  "name": "angular-paginate",
+  "name": "cryptolions-paginate",
   "version": "1.0.2",
   "peerDependencies": {
     "@angular/common": "^10.0.6",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jiygun/angular-paginate.git"
+    "url": "https://github.com/orange1337/angular-paginate.git"
   },
   "keywords": [
     "angular",
