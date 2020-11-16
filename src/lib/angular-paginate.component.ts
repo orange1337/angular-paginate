@@ -20,6 +20,7 @@ import { Pagintion } from './pagination';
 })
 export class AngularPaginateComponent implements OnInit,OnChanges {
   
+  @Input() firstPages:number;
   @Input() totalPages:number;
   @Input() maximumShowAblePage:number;
 
@@ -39,7 +40,7 @@ export class AngularPaginateComponent implements OnInit,OnChanges {
   private _isLastSectionVisible:boolean;
 
   constructor() { 
-    this._pagination=new Pagintion();
+    this._pagination=new Pagintion(this.firstPages);
     this._pages=new Array();
     this.activePageNumber=new EventEmitter();
     this._isPaginationDisable=false;
